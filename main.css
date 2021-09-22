@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    box-sizing: border-box;
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    --link-color: hsl(228, 45%, 44%);
+    --semi-transparent-bright-blue: hsla(245, 75%, 52%, 0.8);
+}
+
+body {
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h3,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.order-card {
+    background-color: var(--very-pale-blue);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+#order-img-hero {
+    width: 100%;
+}
+
+.order-summary {
+    padding: 2rem;
+    text-align: center;
+}
+
+.order-summary h1 {
+    margin: 1rem;
+}
+
+.order-summary p {
+    margin: 0 auto;
+    color: var(--desaturated-blue);
+    font-size: 16px;
+    max-width: 30ch;
+}
+
+.plan-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: hsla(228, 17%, 83%, 0.15);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.plan-item a {
+    flex-basis: 40%;
+    color: var(--link-color);
+    font-weight: 700;
+    text-align: right;
+}
+
+.plan-item a:active {
+    color: var(--semi-transparent-bright-blue);
+    text-decoration: none;
+}
+
+input[type=button] {
+    font-weight: 700;
+    cursor: pointer;
+    border: transparent;
+    margin: 0.5rem 0;
+}
+
+.primary-button {
+    color: white;
+    background-color: var(--bright-blue);
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    width: 100%;
+    box-shadow: 0 1rem 20px hsla(245, 75%, 52%, 0.2);
+}
+
+.primary-button:active {
+    background-color: var(--semi-transparent-bright-blue)
+}
+
+.secondary-button {
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.secondary-button:active {
+    color: var(--dark-blue);
+}
+
+.attribution {
+    font-size: 11px;
+    width: max-content;
+    padding-bottom: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.attribution a {
+    color: var(--link-color);
+}
+
+@media screen and (max-width: 460px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+    }
+
+    .order-card {
+        width: 90%;
+    }
+
+    .order-summary {
+        padding: 1.5rem;
+    }
+
+    .plan-item {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
